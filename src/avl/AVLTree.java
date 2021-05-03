@@ -171,6 +171,8 @@ public class AVLTree {
 
         return node;
     }
+	
+	
 	public int insert(int k, boolean i) {
 		int counter = 0;
 			if (this.empty()) {
@@ -670,8 +672,8 @@ public class AVLTree {
 	 * 
 	 * @precondition: this.search(k) != null.
 	 *
-	 * @param node (the node to start the search at)
-	 * @param k    (key of the node we search for).
+	 * @param node - the node to start the search at
+	 * @param k    -key of the node we search for.
 	 * @return pointer to AVLNode with Key == k.
 	 * 
 	 *         Complexity: O(logn)
