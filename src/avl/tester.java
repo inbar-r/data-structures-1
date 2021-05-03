@@ -1,6 +1,7 @@
 package avl;
-
 import java.util.Arrays;
+import java.util.Random;
+import java.util.function.IntPredicate;
 
 
 
@@ -85,8 +86,6 @@ public class tester {
         System.out.println(tree.successor(tree.getRoot().getRight())==null);
         System.out.println(tree.successor(tree.getRoot().getLeft()).getKey());
     }
-
-
-    }
+}
 
 
