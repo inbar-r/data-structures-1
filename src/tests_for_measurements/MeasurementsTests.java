@@ -131,7 +131,7 @@ public class MeasurementsTests {
 		double sum = 0;
 		for (double time : times)
 			sum += time;
-		return ((double) sum / (double) times.length);
+		return (double) (sum / (double) times.length);
 	}
 
 	private static List<Integer> getBalancedList(int size){
