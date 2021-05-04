@@ -16,11 +16,11 @@ public class MeasurementsTests {
 
 	public static void main(String[] args) {
 		System.out.println("Q1 - prefixXor");
-		for (int i = 1; i <= 5; i++) { // Q1
+		for (int i = 6; i > 0; i--) { // Q1
 			calAndPrintTimePrefixXor(i);
 		}
 		System.out.println("Q1 - succPrefixXor");
-		for (int i = 1; i <= 5; i++) {
+		for (int i = 6; i > 0; i--) {
 			calAndPrintTimeSuccPrefixXor(i);
 		}
 		System.out.println();

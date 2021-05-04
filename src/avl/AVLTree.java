@@ -43,7 +43,7 @@ public class AVLTree {
 		return this.root.isVirtualNode;
 	}
 
-	/**
+	/** 
 	 * public boolean search(int k)
 	 * <p>
 	 * returns the info of an item with key k if it exists in the tree otherwise,
@@ -544,18 +544,6 @@ public class AVLTree {
 	public AVLNode getRoot() {
 		return this.root;
 	}
-
-	// public AVLNode getNode(AVLNode node, int k) {
-	// AVLNode nodeToDelete = node;
-	// while (nodeToDelete.getKey() != k) {
-	// if (k < nodeToDelete.key) {
-	// nodeToDelete = (AVLNode) nodeToDelete.getLeft();
-	// } else {
-	// nodeToDelete = (AVLNode) nodeToDelete.getRight();
-	// }
-	// }
-	// return nodeToDelete;
-	// }
 
 	/**
 	 * public boolean prefixXor(int k)
@@ -1077,5 +1065,4 @@ public class AVLTree {
 
 		}
 	}
-
 }
