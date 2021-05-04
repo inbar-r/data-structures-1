@@ -39,7 +39,8 @@ public class MeasurementsTests {
 			System.out.println("when tree is not balanced, and arithmetic list, avg running time is "
 					+ calAvgForInsertUnbalanced(new ArrayList<>(arithmetic), size) + " nano sec");
 
-			List<Integer> balanced = getBalancedList(size);
+			List<Integer> balanced = new ArrayList<>(size);
+			balanceList(balanced, new ArrayList<>(arithmetic), 0, size -1);
 			System.out.println("when tree is balanced, and balanced list, avg running time is "
 					+ calAvgForInsertBalanced(new ArrayList<>(balanced), size) + " nano sec");
 			System.out.println("when tree is not balanced, and balanced list, avg running time is "
@@ -140,16 +141,13 @@ public class MeasurementsTests {
 		return (double) (sum / (double) times.length);
 	}
 
-	private static List<Integer> getBalancedList(int size) {
-		List<Integer> list = new ArrayList<>();
-		int mid = size / 2;
-		int after = mid + 1;
-		while (mid > 0 && after <= size) {
-			list.add(mid);
-			list.add(after);
-			mid--;
-			after++;
-		}
-		return list;
+	private static List<Integer> balanceList(List<Integer> b, List<Integer> nums, int start, int end) {//(int size) {
+		 int mid = (int)Math.round((1.0 * start + end) / 2);
+		    b.add(nums.get(mid));
+		    if (start <= mid - 1)
+		        balanceList(b, nums, start, mid - 1);
+		    if (end >= mid + 1)
+		        balanceList(b, nums, mid + 1, end);
+		    return b;
 	}
 }
